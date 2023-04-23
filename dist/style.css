@@ -1,8 +1,10 @@
 :root {
  --black: #1e1a1d;
- --white: #ecebf3;
+ --white: #ffffff;
  --equal: #17b890;
- --keys: #d4d2d5;
+ --equal_active: #0e9b78;
+ --keys: #ffffff;
+ --keys_active: #a4a1a6;
 }
 
 html {
@@ -38,6 +40,10 @@ button:hover,
 button:active,
 button:focus {
  outline: none;
+}
+
+button:active{
+    background-color: var(--keys_active);
 }
 
 .calculator {
@@ -77,3 +83,8 @@ button[data-action="calculate"] {
  grid-column: -2;
  grid-row: 2 / span 4;
 }
+button[data-action="calculate"]:active {
+    background-color: var(--equal_active);
+    grid-column: -2;
+    grid-row: 2 / span 4;
+   }
